@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7822428285263387711}
   - component: {fileID: 4926626056509939141}
+  - component: {fileID: 15496962056247384}
   m_Layer: 0
   m_Name: Plataforma
   m_TagString: Untagged
@@ -60,6 +61,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &15496962056247384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5864177683358873884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b763510f8ce02c343a4fd4a446a27631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6713031164832773048
 GameObject:
   m_ObjectHideFlags: 0
