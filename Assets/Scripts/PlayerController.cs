@@ -39,17 +39,11 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
-        if(other.tag == "ZonaDeMort")
+        if (other.tag == "ZonaDeMort")
         {
-            Debug.Log("ENTRO");
             viu = false;
             rb.linearVelocity = Physics.gravity;
             panelGameOver.SetActive(true);
-        }
-        else
-        {
-            Debug.Log("NO  ENTRO");
         }
     }
 }
