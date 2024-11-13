@@ -1,5 +1,6 @@
 using System;
 using System.Net.Http.Headers;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -11,11 +12,14 @@ public class PlayerController : MonoBehaviour
     public bool jocComencat;
     private bool viu = true;
     [SerializeField] private GameObject panelGameOver;
-
+    [SerializeField] private TMP_Text score;
+    [SerializeField] private TMP_Text scoreTotal;
+    private int puntuacio;
 
     private void OnEnable()
     {
         if (Instancia == null) Instancia = this;
+        PlatformControl.CauPlataforma += AugmentarPuntuacio;
     }
     public void CanviarDireccio()
     {
@@ -27,6 +31,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody> ();
+        puntuacio = 0;
     }
 
     void Update()
@@ -36,6 +41,8 @@ public class PlayerController : MonoBehaviour
             if (dirALaDreta) rb.linearVelocity = (Vector3.right * vel) + Physics.gravity;
             else rb.linearVelocity = (Vector3.forward * vel) + Physics.gravity;
         }
+        score.text = puntuacio.ToString();
+        scoreTotal.text = puntuacio.ToString(); 
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -44,6 +51,11 @@ public class PlayerController : MonoBehaviour
             viu = false;
             rb.linearVelocity = Physics.gravity;
             panelGameOver.SetActive(true);
+            score.enabled = false;
         }
+    }
+    private void AugmentarPuntuacio()
+    {
+        puntuacio++;
     }
 }

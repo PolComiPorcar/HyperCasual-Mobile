@@ -1,11 +1,14 @@
+using TMPro;
 using UnityEngine;
 
 public class PlatformControl : MonoBehaviour
 {
+    public delegate void sumarPuntuacio();
+    public static event sumarPuntuacio CauPlataforma;
     private bool sobreLaPlataforma;
     private Rigidbody plataformaActual;
     private Transform posicioEsfera;
-
+    [SerializeField] private TMP_Text score;
     private void Start()
     {
         plataformaActual = GetComponent<Rigidbody>();
@@ -17,11 +20,14 @@ public class PlatformControl : MonoBehaviour
         {
             if(Vector3.Distance(transform.position, posicioEsfera.position) > 2f)
             {
-                plataformaActual.isKinematic = false;  
+                plataformaActual.isKinematic = false;
+                CauPlataforma?.Invoke();
+                Debug.Log("elimino");
             }        
         }
         if (transform.position.y < -10f)
         {
+           
             Destroy(this.gameObject);
         }
     }
