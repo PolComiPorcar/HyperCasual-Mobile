@@ -22,7 +22,6 @@ public class PlatformControl : MonoBehaviour
             {
                 plataformaActual.isKinematic = false;
                 CauPlataforma?.Invoke();
-                Debug.Log("elimino");
             }        
         }
         if (transform.position.y < -10f)

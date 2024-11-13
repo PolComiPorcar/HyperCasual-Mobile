@@ -1747,6 +1747,7 @@ MonoBehaviour:
   dirALaDreta: 0
   jocComencat: 0
   panelGameOver: {fileID: 1980648451}
+  panelActio: {fileID: 1815254074}
   score: {fileID: 279959571}
   scoreTotal: {fileID: 1038523439}
 --- !u!1 &1980648451

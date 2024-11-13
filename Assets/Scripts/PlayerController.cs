@@ -2,6 +2,7 @@ using System;
 using System.Net.Http.Headers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,14 +13,17 @@ public class PlayerController : MonoBehaviour
     public bool jocComencat;
     private bool viu = true;
     [SerializeField] private GameObject panelGameOver;
+    [SerializeField] private GameObject panelActio;
     [SerializeField] private TMP_Text score;
     [SerializeField] private TMP_Text scoreTotal;
+    private int numEscena = 0;
     private int puntuacio;
 
     private void OnEnable()
     {
         if (Instancia == null) Instancia = this;
         PlatformControl.CauPlataforma += AugmentarPuntuacio;
+
     }
     public void CanviarDireccio()
     {
@@ -51,11 +55,17 @@ public class PlayerController : MonoBehaviour
             viu = false;
             rb.linearVelocity = Physics.gravity;
             panelGameOver.SetActive(true);
+            panelActio.SetActive(false);
             score.enabled = false;
         }
     }
     private void AugmentarPuntuacio()
     {
         puntuacio++;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(numEscena);
     }
 }
