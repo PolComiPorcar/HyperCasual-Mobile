@@ -12,12 +12,14 @@ public class PlayerController : MonoBehaviour
     public bool dirALaDreta;
     public bool jocComencat;
     private bool viu = true;
+    [SerializeField] private float IncrementVelocitat;
     [SerializeField] private GameObject panelGameOver;
     [SerializeField] private GameObject panelActio;
     [SerializeField] private TMP_Text score;
     [SerializeField] private TMP_Text scoreTotal;
     private int numEscena = 0;
     private int puntuacio;
+    private float velocitatMax = 12;
 
     private void OnEnable()
     {
@@ -30,6 +32,10 @@ public class PlayerController : MonoBehaviour
         if (!jocComencat) jocComencat = true;
 
         dirALaDreta = !dirALaDreta;
+        if(vel < velocitatMax)
+        {
+            AugmentVelocitat();
+        }
     }
 
     void Start()
@@ -68,4 +74,10 @@ public class PlayerController : MonoBehaviour
     {
         SceneManager.LoadScene(numEscena);
     }
+
+    private void AugmentVelocitat()
+    {
+        vel = vel + IncrementVelocitat;
+    }
+
 }
