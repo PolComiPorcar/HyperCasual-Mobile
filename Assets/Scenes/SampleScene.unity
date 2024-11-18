@@ -1900,6 +1900,7 @@ MonoBehaviour:
   panelActio: {fileID: 1815254074}
   score: {fileID: 279959571}
   scoreTotal: {fileID: 1038523439}
+  TapToStart: {fileID: 1020804594}
 --- !u!1 &1980648451
 GameObject:
   m_ObjectHideFlags: 0
