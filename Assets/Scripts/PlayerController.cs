@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject panelActio;
     [SerializeField] private TMP_Text score;
     [SerializeField] private TMP_Text scoreTotal;
+    [SerializeField] private TMP_Text TapToStart;
     private int numEscena = 0;
     private int puntuacio;
     private float velocitatMax = 12;
@@ -29,7 +30,12 @@ public class PlayerController : MonoBehaviour
     }
     public void CanviarDireccio()
     {
-        if (!jocComencat) jocComencat = true;
+        if (!jocComencat)
+        {
+            jocComencat = true;
+            TapToStart.text = "";
+            TapToStart.enabled = false;
+        }
 
         dirALaDreta = !dirALaDreta;
         if(vel < velocitatMax)
@@ -63,6 +69,7 @@ public class PlayerController : MonoBehaviour
             panelGameOver.SetActive(true);
             panelActio.SetActive(false);
             score.enabled = false;
+            Time.timeScale = 0;
         }
     }
     private void AugmentarPuntuacio()
@@ -72,6 +79,7 @@ public class PlayerController : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(numEscena);
     }
 
