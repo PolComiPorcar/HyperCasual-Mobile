@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     }
     public void CanviarDireccio()
     {
+        //per cada tap canviem la direccio
         if (!jocComencat)
         {
             jocComencat = true;
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //avançem la posicio del jugador en la direccio en la que esta
         if (jocComencat && viu)
         {
             if (dirALaDreta) rb.linearVelocity = (Vector3.right * vel) + Physics.gravity;
@@ -62,6 +64,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        //Si el jugador cau, mostrem el menu per reiniciar
         if (other.tag == "ZonaDeMort")
         {
             viu = false;
@@ -72,17 +75,20 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    // sumem puntuacio
     private void AugmentarPuntuacio()
     {
         puntuacio++;
     }
 
+    //reiniciar al clicar el boto
     public void Restart()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(numEscena);
     }
 
+    //augmentem dificultat 
     private void AugmentVelocitat()
     {
         vel = vel + IncrementVelocitat;

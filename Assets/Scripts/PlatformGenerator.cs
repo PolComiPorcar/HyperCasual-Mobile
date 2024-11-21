@@ -19,6 +19,7 @@ public class PlatformGenerator : MonoBehaviour
         GenerarPlataformes();
     }
     
+    //generar plataforma procedural
     void GenerarPlataformes()
     {
         for (int i = 0; i < nPlataformes; i++)
@@ -26,6 +27,7 @@ public class PlatformGenerator : MonoBehaviour
             SeguentPlataforma();
         }
     }
+    // generem la plataforma aleatoriament
     public void SeguentPlataforma()
     {
         direccio = Random.Range(0, 2);

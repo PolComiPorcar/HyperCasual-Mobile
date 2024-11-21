@@ -16,17 +16,20 @@ public class PlatformControl : MonoBehaviour
 
     private void Update()
     {
+        
         if (sobreLaPlataforma && plataformaActual.isKinematic) 
         {
+            //fem caure les plataformes un cop superades
             if(Vector3.Distance(transform.position, posicioEsfera.position) > 2f)
             {
                 plataformaActual.isKinematic = false;
+                //sumem puntuacio per plataforma eliminada
                 CauPlataforma?.Invoke();
             }        
         }
         if (transform.position.y < -10f)
         {
-           
+           //eliminem les plataformes un cop no estan en pantalla
             Destroy(this.gameObject);
         }
     }
