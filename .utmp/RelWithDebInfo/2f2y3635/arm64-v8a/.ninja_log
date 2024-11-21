@@ -1,0 +1,23 @@
+# ninja log v5
+21	2416	7538852354538733	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4c172065c29bd8fb
+81	443	7538852334899120	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	1ed71e6401f5d0d5
+443	657	7538852337049134	C:/Program Files/GitHub/Pol/HyperCasual-Mobile/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2f2y3635/obj/arm64-v8a/libswappywrapper.so	faecabe5298c67f6
+70	1765	7538852347967062	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e19ced6b3192f597
+44	1986	7538852350194487	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	15d9d3a97307e13
+65	1802	7538852348355581	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	487c931cbb04c9f5
+76	1925	7538852349551616	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	bdf8fae3c400e33e
+27	1811	7538852348431099	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	d10e1db5009f8f41
+7	1780	7538852348149419	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	601b208f272c68e4
+60	2219	7538852352576804	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	d04bf4b0a6c3ce14
+2416	2544	7538852355930793	C:/Program Files/GitHub/Pol/HyperCasual-Mobile/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2f2y3635/obj/arm64-v8a/libgame.so	71fa2472209df5ea
+56	469	7538857058555618	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	1ed71e6401f5d0d5
+469	688	7538857061029467	C:/Program Files/GitHub/Pol/HyperCasual-Mobile/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2f2y3635/obj/arm64-v8a/libswappywrapper.so	faecabe5298c67f6
+16	992	7538857063972631	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	601b208f272c68e4
+35	1003	7538857064083422	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e19ced6b3192f597
+6	1009	7538857064148837	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	d10e1db5009f8f41
+40	1016	7538857064239454	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	487c931cbb04c9f5
+50	1080	7538857064862219	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	bdf8fae3c400e33e
+11	1138	7538857065475522	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	15d9d3a97307e13
+45	1255	7538857066685624	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	d04bf4b0a6c3ce14
+30	1355	7538857067660087	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4c172065c29bd8fb
+1356	1447	7538857068665039	C:/Program Files/GitHub/Pol/HyperCasual-Mobile/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2f2y3635/obj/arm64-v8a/libgame.so	71fa2472209df5ea
